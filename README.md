@@ -67,34 +67,6 @@ Get inside mobile-app folder
 cd mobile-app
 Copy the .env.example as .env and update URL to API URL if needed.
 
-Run the app (android/iOS)
-
-npm run android
-or
-
-npm run ios
-Creating public (signed APK)
-Creating the TF Lite Model
-Run Jupyter Notebook in Browser.
-jupyter notebook
-Open training/tf-lite-converter.ipynb in Jupyter Notebook.
-In cell #2, update the path to dataset.
-Run all the Cells one by one.
-Model would be saved in tf-lite-models folder.
-Deploying the TF Lite on GCP
-Create a GCP account.
-Create a Project on GCP (Keep note of the project id).
-Create a GCP bucket.
-Upload the potatoes.h5 model in the bucket in the path models/potatos.h5.
-Install Google Cloud SDK (Setup instructions).
-Authenticate with Google Cloud SDK.
-gcloud auth login
-Run the deployment script.
-cd gcp
-gcloud functions deploy predict_lite --runtime python38 --trigger-http --memory 512 --project project_id
-Your model is now deployed.
-Use Postman to test the GCF using the Trigger URL.
-
 Deploying the TF Model (.h5) on GCP
 Create a GCP account.
 Create a Project on GCP (Keep note of the project id).
